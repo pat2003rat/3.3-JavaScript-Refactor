@@ -109,10 +109,14 @@ var reverseStr = function(str) {
   str = arr.join("");
   return str;
 };
-
+console.log(reverseStr("hello"));
 // Put your answer below -------------------------
 
+function reverseStr(str){
 
+var arr2 = str.split(""); arr2.reverse();str.arr2.join(""); return str;
+}
+console.log(reverseStr("hello"));
 // -----------------------------------------------
 
 ///////////////a///////////////////////////////////
