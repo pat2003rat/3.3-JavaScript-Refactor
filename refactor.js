@@ -47,7 +47,7 @@ console.log("Something Cool!");
 // function
 
 function sayHi () {
-  alert("Hello, World!");
+  // alert("Hello, World!");
 }
 
 setTimeout(sayHi, 2000);
@@ -55,7 +55,7 @@ setTimeout(sayHi, 2000);
 // Put your answer below -------------------------
 
 var sayHi = function(){
-  alert("Hello, World!");
+  // alert("Hello, World!");
 
 };
 setTimeout(sayHi, 2000);
@@ -90,7 +90,7 @@ console.log("The letter is", letter);
 // Put your answer below -------------------------
 
 // answer [c] : when running the function, the 1 in the console.log tells it to console.log the letter y in 1/1000 of a second, or 1 milisecond. Although this is an incredibly quick time, the console.log of the letter x has no command telling it to timout for a set duration. Therefore, the letter z runs first, then y, as denoted by the answer [c].
-
+``
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -147,9 +147,21 @@ var spanishColor = function(colorName) {
     return "#000000";
   }
 };
-
 // Put your answer below -------------------------
 
+var spanishColor = function(colorName) {
+var color = {
+  rojo: "#ff0000",
+  blanco:"#ffffff",
+  azul: "#0000ff",
+  verde: "#00ff00",
+  negro: "#000000"
+
+};
+
+return color[colorName];
+};
+console.log(spanishColor('rojo'));
 
 // -----------------------------------------------
 
@@ -167,7 +179,8 @@ var foo = "bar";
 
 // Put your answer below -------------------------
 
-
+var foo;
+foo = "bar";
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -183,12 +196,18 @@ var foo = "bar";
 // function.
 
 var callTenTimes = function(callback) {
-  var range = _.range(10);
-  _.each(range, callback);
+	for(var i = 0; i < 10; i++){
+		callback();
+	}
 };
 
 // Put your answer below -------------------------
 
+function callNtimes(callback, n){
+  for(var i = 0; i < n; i++){
+		callback();
+  }
+};
 
 // -----------------------------------------------
 
@@ -217,6 +236,16 @@ var decreaseScore = function() {
 
 // Put your answer below -------------------------
 
+(function(){
+  var increaseScore = function() {
+    score++;
+  };
+
+  var decreaseScore = function() {
+    score--;
+
+};
+}());
 
 // -----------------------------------------------
 
@@ -229,13 +258,23 @@ var decreaseScore = function() {
 // twoPlusTwo gets set to `undefined`. Refactor
 // the function to make it work.
 
-var addNumbers = function(numberA, numberB) {
-  console.log(numberA + numberB);
-};
-
-var twoPlusTwo = addNumbers(2,2);
+// var addNumbers = function(numberA, numberB) {
+//   console.log(numberA + numberB);
+// };
+//
+// var twoPlusTwo = addNumbers(2, 2);
+// console.log(twoPlusTwo);
 
 // Put your answer below -------------------------
+
+var addNumbers = function(numberA, numberB) {
+  console.log(numberA + numberB);
+  return numberA + numberB
+};
+
+var twoPlusTwo = addNumbers(2, 2);
+
+console.log(twoPlusTwo);
 
 
 // -----------------------------------------------
@@ -258,10 +297,27 @@ var twoPlusTwo = addNumbers(2,2);
 var speed = 0;
 
 var accelerate = function(amount) {
-  speed += amount;
-};
 
+  return speed += amount;
+
+};
+console.log(accelerate());
 // Put your answer below -------------------------
+
+//It is returning NaN because the amount is undefined
+//when you add something to undefined, it shows as NaN because
+//undefined is not a number and adding a number makes it NaN
+
+var speed = 0;
+
+var accelerate = function(amount) {
+  if(amount === 0){
+    speed += 1;
+  }else{
+    speed += amount;
+  }
+};
+accelerate();
 
 
 // -----------------------------------------------
