@@ -89,6 +89,7 @@ console.log("The letter is", letter);
 
 // Put your answer below -------------------------
 
+// answer [c] : when running the function, the 1 in the console.log tells it to console.log the letter y in 1/1000 of a second, or 1 milisecond. Although this is an incredibly quick time, the console.log of the letter x has no command telling it to timout for a set duration. Therefore, the letter z runs first, then y, as denoted by the answer [c].
 
 // -----------------------------------------------
 
@@ -114,7 +115,7 @@ var reverseStr = function(str) {
 
 // -----------------------------------------------
 
-//////////////////////////////////////////////////
+///////////////a///////////////////////////////////
 //////////////////////////////////////////////////
 
 // 5. --------------------------------------------
